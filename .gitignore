@@ -3,5 +3,3 @@ pycaret_venv
 NOTE.docx
 .pkl
 venv
-logs.log
-./test/logs.log
