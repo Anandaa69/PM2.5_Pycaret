@@ -7902,3 +7902,49 @@ Returning the number of logical cores instead. You can silence this warning by s
                  TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
                 ('trained_model', GradientBoostingRegressor(random_state=123))])
 2025-03-14 17:42:12,314:INFO:save_model() successfully completed......................................
+2025-03-14 21:27:23,615:INFO:Initializing save_model()
+2025-03-14 21:27:23,616:INFO:save_model(model=GradientBoostingRegressor(random_state=123), model_name=gbr_pm_2_5_model, prep_pipe_=Pipeline(memory=FastMemory(location=C:\Users\Saeb0m\AppData\Local\Temp\joblib),
+         steps=[('date_feature_extractor',
+                 TransformerWrapper(include=['date'],
+                                    transformer=ExtractDateTimeFeatures())),
+                ('numerical_imputer',
+                 TransformerWrapper(include=['humidity', 'temperature', 'year',
+                                             'month', 'day', 'day_of_week',
+                                             'week_of_year', 'season',
+                                             'dew_point', 'is_weekend',
+                                             'tem...
+                                             'pm_2_5_lag_4', 'pm_2_5_lag_5',
+                                             'pm_2_5_lag_6', 'pm_2_5_lag_7',
+                                             'pm_2_5_lag_8', 'pm_2_5_lag_9',
+                                             'pm_2_5_lag_10', 'pm_2_5_lag_11',
+                                             'pm_2_5_lag_12', ...],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=[],
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123)))]), verbose=True, use_case=MLUsecase.REGRESSION, kwargs={})
+2025-03-14 21:27:23,616:INFO:Adding model into prep_pipe
+2025-03-14 21:27:23,653:INFO:gbr_pm_2_5_model.pkl saved in current working directory
+2025-03-14 21:27:23,659:INFO:Pipeline(memory=Memory(location=None),
+         steps=[('date_feature_extractor',
+                 TransformerWrapper(include=['date'],
+                                    transformer=ExtractDateTimeFeatures())),
+                ('numerical_imputer',
+                 TransformerWrapper(include=['humidity', 'temperature', 'year',
+                                             'month', 'day', 'day_of_week',
+                                             'week_of_year', 'season',
+                                             'dew_point', 'is_weekend',
+                                             'temp_humidity_ratio',
+                                             'heat_index', 'rh_index'...
+                                             'pm_2_5_lag_8', 'pm_2_5_lag_9',
+                                             'pm_2_5_lag_10', 'pm_2_5_lag_11',
+                                             'pm_2_5_lag_12', ...],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=[],
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('remove_outliers',
+                 TransformerWrapper(transformer=RemoveOutliers(random_state=123))),
+                ('trained_model', GradientBoostingRegressor(random_state=123))])
+2025-03-14 21:27:23,659:INFO:save_model() successfully completed......................................
